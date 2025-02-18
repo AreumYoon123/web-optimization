@@ -1,0 +1,366 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+.inner {
+    width: 100%;
+    padding: 0 50px;
+}
+
+/* HEADER */
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;  
+    background: white; 
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .inner {
+    height: 100%;  
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ul {
+    display: flex;
+}
+
+.header li {
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+.header .logo img {
+    width: 200px;
+    height: auto;
+}
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* INTRO (배경 이미지 + 캐러셀) */
+.intro .inner{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    background: url('../img/main.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.intro .intro-content {
+    z-index: 10;
+    position: absolute;
+    left: 200px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    text-align: left;
+    max-width: 300px;
+    padding-bottom: 30px;
+}
+
+.intro p {
+    font-size: 18px;
+    text-align: left;
+    max-width: 350px;
+}
+.github-btn {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background-color: #333; 
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.github-btn:hover {
+    background-color: #555; 
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* CARD 섹션 */
+.cards {
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.cards .inner {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; 
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h2 {
+    font-size: 25px;
+    margin: 10px 20px;
+    max-width: 200px; 
+    text-align: left;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+    margin: 10px 20px;
+}
+
+/* 커스텀 */
+.custom {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.custom .inner {
+    max-width: 1350px; 
+    margin: 0 auto;
+}
+
+.custom h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/*모달 스타일 */
+.modal {
+    opacity: 0; 
+    visibility: hidden; 
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal.active {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 푸터 */
+footer .inner {
+    background: rgb(35, 35, 35);
+    color: white;
+    text-align: left;
+    padding: 70px;
+    padding-left: 200px;
+}
+
+footer .logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .header .inner {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 810px) {
+    .header {
+        height: 60px;
+    }
+    .nav-menu {
+        display: none; 
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgb(240, 240, 240);
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        display: flex; 
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .intro {
+        height: 300px;
+    }
+     
+    .intro .intro-content {
+        position: absolute;
+        left: 100px;
+    }
+    .intro h1 {
+        font-size: 5vw;
+        text-align: left;
+        font-weight: bold;
+        padding-bottom: 30px;
+        max-width: 220px;
+    }
+    .intro p {
+        font-size: 3vw;
+        text-align: left;
+        max-width: 270px;
+    }
+    .cards .inner {
+        margin-top: 300px;
+    }
+    footer .inner {
+        padding-left: 100px;
+    }
+}
+@media (max-width: 376px) {
+    .header {
+        height: 60px;
+    }
+    .intro {
+        height: 300px;
+    }
+    .intro h1 {
+        font-size: 28px;
+    }
+    .intro .intro-content {
+        position: absolute;
+        left: 80px;
+    }
+    
+    .intro h1 {
+        font-size: 5vw;
+        text-align: left;
+        font-weight: bold;
+        max-width: 150px;
+        padding-bottom: 30px;
+    }
+    
+    .intro p {
+        font-size: 3vw;
+        text-align: left;
+        max-width: 200px;
+    }
+    .card {
+        width: 90%;
+    }
+    footer .inner {
+        padding-left: 50px;
+    }
+    
+}
