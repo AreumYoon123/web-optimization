@@ -294,18 +294,20 @@ footer .logo img {
         justify-content: flex-start;
         align-items: flex-start;
     }
-    
     .nav-menu.active {
-        display: flex; 
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
     }
-
+    .nav-menu > li {
+        margin-bottom: 20px;
+    }
     .hamburger {
         display: block;
     }
     .intro {
         height: 300px;
     }
-     
     .intro .intro-content {
         position: absolute;
         left: 100px;
@@ -365,4 +367,5 @@ footer .logo img {
     }
     
 }
+
 
