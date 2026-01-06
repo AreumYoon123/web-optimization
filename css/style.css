@@ -273,6 +273,9 @@ footer .logo img {
     .header {
         height: 60px;
     }
+    .header ul {
+        display: block;    
+    }
     .nav-menu {
         display: none; 
         position: fixed;
@@ -291,7 +294,7 @@ footer .logo img {
         flex-direction: column;
         padding: 20px;
     }
-    .nav-menu > li {
+    ul > li {
         margin-bottom: 20px;
     }
     .hamburger {
@@ -359,6 +362,7 @@ footer .logo img {
     }
     
 }
+
 
 
 
