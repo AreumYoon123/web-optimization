@@ -283,15 +283,16 @@ footer .logo img {
     }
     .nav-menu {
         display: none; 
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgb(240, 240, 240);
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        text-align: center;
+        height: 100%;
+        background-color: #333;
+        z-index: 999;
         flex-direction: column;
-        padding: 10px 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        justify-content: flex-start;
+        align-items: flex-start;
     }
     
     .nav-menu.active {
@@ -364,3 +365,4 @@ footer .logo img {
     }
     
 }
+
