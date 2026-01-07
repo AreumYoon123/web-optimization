@@ -50,11 +50,6 @@
 }
 .close_btn {
     display: none;
-    position: absolute;
-    z-index: 20;
-}
-.close_btn.show {
-    display: block;
 }
 /* INTRO (배경 이미지 + 캐러셀) */
 .intro .inner{
@@ -308,6 +303,17 @@ footer .logo img {
     }
     .hamburger {
         display: block;
+    }
+    .close_btn {
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: 10px;
+        color: #fff;
+        background: transparent;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 20;
     }
     .intro {
         height: 300px;

@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function slideLoop() {
             nextSlide();
-            slideTimeout = setTimeout(() => requestAnimationFrame(slideLoop), 3000); // 3초 후 슬라이드 변경
+            slideTimeout = setTimeout(() => requestAnimationFrame(slideLoop), 3000); // 2초 후 슬라이드 변경
         }
 
-        slideTimeout = setTimeout(() => requestAnimationFrame(slideLoop), 3000); // 첫 실행
+        slideTimeout = setTimeout(() => requestAnimationFrame(slideLoop), 2000); // 첫 실행
     }
 
     // 자동 슬라이드 멈추기
