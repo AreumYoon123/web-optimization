@@ -274,7 +274,8 @@ footer .logo img {
         height: 60px;
     }
     .header ul {
-        display: block;    
+        display: block;
+        color: #fff;
     }
     .nav-menu {
         display: none; 
@@ -362,6 +363,7 @@ footer .logo img {
     }
     
 }
+
 
 
 
