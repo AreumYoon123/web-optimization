@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function slideLoop() {
             nextSlide();
-            slideTimeout = setTimeout(() => requestAnimationFrame(slideLoop), 4000); // 3초 후 슬라이드 변경
+            slideTimeout = setTimeout(() => requestAnimationFrame(slideLoop), 4000); // 4초 후 슬라이드 변경
         }
 
         slideTimeout = setTimeout(() => requestAnimationFrame(slideLoop), 1000); // 첫 실행
