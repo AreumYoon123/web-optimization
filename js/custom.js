@@ -2,7 +2,7 @@
 const modal = document.querySelector(".modal");
 const modalImg = document.querySelector("#modal-img");
 const images = document.querySelectorAll(".gallery img");
-const closeBtn = document.querySelector(".close");
+const close = document.querySelector(".close");
 
 // 이미지 클릭 시 모달 열기 (클래스 추가)
 images.forEach(img => {
@@ -13,7 +13,7 @@ images.forEach(img => {
 });
 
 // 닫기 버튼 클릭 시 모달 닫기 (클래스 제거)
-closeBtn.addEventListener("click", function() {
+close.addEventListener("click", function() {
     modal.classList.remove("active"); // 모달 숨기기
 });
 
@@ -23,3 +23,4 @@ modal.addEventListener("click", function(event) {
         modal.classList.remove("active");
     }
 });
+
